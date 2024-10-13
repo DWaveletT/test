@@ -25,6 +25,8 @@ jobs:
           root_file: sample.tex
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
+          pre_compile: |
+            python latexminted.py --version
 
       - uses: actions/upload-artifact@v4
         with:
